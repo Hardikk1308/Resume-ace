@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { analyzeResume } from '@/ai/flows/analyze-resume';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
@@ -58,8 +58,7 @@ export default function Home() {
     <div className="container mx-auto p-4 max-w-3xl">
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-2xl font-bold">Resume Ace</CardTitle>
-          <CardDescription>AI Resume Analyzer</CardDescription>
+          <CardTitle className="text-lg font-bold">Resume Ace</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
 
@@ -90,7 +89,7 @@ export default function Home() {
                   </>
                 ) : (
                   <>
-                    Analyze Resume
+                    Analyze
                     <Upload className="ml-2 h-4 w-4" />
                   </>
                 )}
@@ -104,27 +103,27 @@ export default function Home() {
 
               <div className="space-y-2">
                 <h3 className="text-lg font-medium">Summary</h3>
-                <Textarea className="bg-secondary" readOnly value={analysisResult.analysis.summary} />
+                <Textarea className="bg-muted" readOnly value={analysisResult.analysis.summary} />
               </div>
 
               <div className="space-y-2">
                 <h3 className="text-lg font-medium">Skills</h3>
-                <Textarea className="bg-secondary" readOnly value={analysisResult.analysis.skills.join(', ')} />
+                <Textarea className="bg-muted" readOnly value={analysisResult.analysis.skills.join(', ')} />
               </div>
 
               <div className="space-y-2">
                 <h3 className="text-lg font-medium">Experience</h3>
-                <Textarea className="bg-secondary" readOnly value={analysisResult.analysis.experience} />
+                <Textarea className="bg-muted" readOnly value={analysisResult.analysis.experience} />
               </div>
 
               <div className="space-y-2">
                 <h3 className="text-lg font-medium">Education</h3>
-                <Textarea className="bg-secondary" readOnly value={analysisResult.analysis.education} />
+                <Textarea className="bg-muted" readOnly value={analysisResult.analysis.education} />
               </div>
 
               <div className="space-y-2">
                 <h3 className="text-lg font-medium">Feedback</h3>
-                <Textarea className="bg-secondary" readOnly value={analysisResult.analysis.feedback} />
+                <Textarea className="bg-muted" readOnly value={analysisResult.analysis.feedback} />
               </div>
             </div>
           )}
